@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+*{
+    margin: 0;
+}
+.big-black{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+.flex  img{
+    height: 50px;
+    padding-left: 60px;
+}
+.flex button{
+    height: 20px;
+    background-color: #FFA500;
+    border: none;
+    border-radius: 9999px;
+    padding-right: 28px;
+    padding-left: 28px;
+    padding-bottom: 30px;
+    padding-top: 12px;
+}
+.flex button a{
+    color: white;
+    text-decoration: none;
+    font-family: Roboto Mono;
+    font-weight: bold;
+    letter-spacing: 6%;
+}
+.text-white{
+    color: white;
+}
+.flex a{
+    text-decoration: none;
+    font-family: Roboto Mono;
+}
+.main-section img{
+    width: 100%;
+    position: absolute;
+    top: -95px;
+    height: 1000px;
+}
+.main-text{
+    position: relative;
+    z-index: 10;
+    padding-left: 60px;
+    padding-top: 100px;
+}
+.main-text h1{
+    color: white;
+    font-family: Goudy Bookletter 1911;
+    font-size: 50px;
+
+}
+.main-text h1 span{
+    color: yellow;
+}
+.main-text p{
+    color: white;
+    font-size: 20px;
+    font-family: Goudy Bookletter 1911;
+}
+.main-text h1{
+    margin-bottom: 30px;
+}
+.main-text p{
+    margin-bottom: 30px;
+}
+.main-text button{
+    border: none;
+    background-color: white;
+    color: rgb(0, 97, 97);
+    border-radius: 2px;
+    padding-right: 18px;
+    padding-left: 18px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+}

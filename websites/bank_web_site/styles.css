@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(252, 252, 252);
+}
+
+header{
+
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

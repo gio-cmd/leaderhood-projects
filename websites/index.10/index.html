@@ -1,0 +1,76 @@
+<DOCTYPE html>
+    <html lag="en">
+      <head>
+        <meta charset="UTF-8">
+        <title>Survey Form</title>
+        <link rel="stylesheet" href="styles.css">
+      </head>
+      <body>
+        <header>
+          <h1 id="title">Survey Form</h1>
+          <p id="description">Fill This Form To Help Us Futher Develop</p>
+        </header>
+        <main>
+          <form action="https://survey-form.freecodecamp.rocks/" id="survey-form">
+            <fieldset>
+    
+            <label for="name" id="name-label">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    
+            <label for="email" id="email-label">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+            <label for="number" id="number-label">Age(optional):</label>
+            <input type="number" id="number" name="age" placeholder="Age(numbers only)" min="6" max="24">
+    
+              <label for="dropdown">What type of learner are you?</label>
+              <select class="dropdown" id="dropdown" name="dropdown" value="dropdown">
+                <option>Verbal</option>
+                <option>Auditory</option>
+                <option>Read/Write</option>
+                <option>Kinaesthetic</option>
+              </select>
+    
+            </fieldset>
+    
+            <fieldset class="radio" required>
+              <legend>Do you know what type of learner your friend is?</legend>
+              <div>
+                <input type="radio" id="yes" name="radio" value="radio" checked>
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="radio" value="radio" checked>
+                <label for="no">No</label>
+                <input type="radio" id="maybe" name="radio" value="radio">
+                <label for="maybe">Maybe</label>
+              </div>
+            </fieldset>
+    
+            <fieldset class="education-levels">
+              <legend>Your education level</legend>
+              <div class="input-group">
+                <input type="checkbox" id="middleSchool" name="educationLevel" value="checkbox">
+                <label class="label" for="middleSchool">Middle School</label>
+              </div>
+              <div class="input-group">
+                <input type="checkbox" id="highSchool" name="educationLevel" value="checkbox">
+                <label class="label" for="highSchool">High School</label>
+              </div>
+              <div class="input-group">
+                <input type="checkbox" id="college" name="educationLevel" value="checkbox">
+                <label class="label" for="college">College</label>
+              </div>
+              <div class="input-group">
+                <input type="checkbox" id="university" name="educationLevel" value="checkbox">
+                <label class="label" for="university">University</label>
+              </div>
+            </fieldset>
+    
+            <fieldset>
+              <legend>Any messages?</legend>
+              <textarea id="textarea" name="message" rows="6" placeholder="Your message"></textarea>
+            </fieldset>
+          <input type="submit" id="submit">
+          <form>
+        </main>
+      </body>
+    </html>

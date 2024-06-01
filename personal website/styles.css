@@ -6,11 +6,11 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
+    background-color: black;
     color: #333;
     padding: 20px;
-    background-color: black;
     height: 100vh;
+    scroll-behavior: smooth;
 }
 
 nav{
@@ -19,7 +19,6 @@ nav{
     padding: 10px;
     text-align: center;
     display: flex;
-    justify-content: flex-end;
     justify-content: space-between;
     border-radius: 25px;
     width: 100%;
@@ -41,7 +40,7 @@ nav{
 
 nav a{
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-size: 1.2rem;
 }
 
@@ -64,7 +63,6 @@ nav div a:hover{
 
 #Home h1{
     width: 600px;
-    
 }
 
 #Home img{
@@ -90,6 +88,8 @@ section p{
     font-size: 2.5rem;
     color: #003366;
 }
+#about h2:hover{
+    color: #032140;}
 #about div{
     display: flex;
     justify-content: space-around;
@@ -120,10 +120,24 @@ section p{
     font-size: 2.5rem;
 }
 
+#squad h2:hover{
+    transform: scale(1.05);
+    color: #120c0c;
+}
+
 #squad p{
     width: 800px;
     color: rgb(118, 112, 112);
     line-height: 25px;
     font-size: 1.3rem;
     margin-bottom: 2rem;
+}
+
+#link{
+    text-decoration: none;
+    color: #003366;
+}
+
+#link:hover{
+    text-decoration: underline;
 }

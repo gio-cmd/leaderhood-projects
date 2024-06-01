@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    background-color: black;
+    height: 100vh;
+}
+
+nav{
+    background-color: #030101;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-between;
+    border-radius: 25px;
+    width: 100%;
+}
+
+#logo_container img{
+    border-radius: 999999px;
+    width: 100px;
+    cursor: pointer;
+}
+
+#nav_links{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: 500px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+nav div a:hover{
+    color: rgb(168, 168, 28);
+    font-weight: 600;
+}
+
+#Home{
+    margin: 30vh 0 0 10vh;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Home span{
+    color: rgb(206, 206, 15);
+}
+
+#Home h1{
+    width: 600px;
+    
+}
+
+#Home img{
+    width: 400px;
+    height: 480px;
+    position: relative;
+    bottom: 130px;
+    right: 40px;
+    border-radius: 30px;
+}
+
+section p{
+    line-height: 1.6;
+}
+
+#about{
+    margin-bottom: 2rem;
+}
+
+#about h2{
+    margin-top: 2rem;
+    margin-left: 3.9rem;
+    font-size: 2.5rem;
+    color: #003366;
+}
+#about div{
+    display: flex;
+    justify-content: space-around;
+}
+
+#about div p{
+    width: 600px;
+    margin-top: 30px;
+}
+
+#about div img{
+    width: 500px;
+    position: relative;
+    bottom: 2.4rem;
+    border-radius: 20px;
+}
+
+#squad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#squad h2{
+    color: #1c0f0f;
+    font-size: 2.5rem;
+}
+
+#squad p{
+    width: 800px;
+    color: rgb(118, 112, 112);
+    line-height: 25px;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}

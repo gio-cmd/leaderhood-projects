@@ -11,15 +11,15 @@ else:
 
 player_name = input("your name: ")
 
-# Ask for the player's experience level
+# ask for the player's experience level
 player_experience = input("to better evaluete your gaming experience please choose your rank: Beginner/Novice/Experienced or Expert: ")
 
-# Function to format items with bullet points
+# function to format items with bullet points
 def format_with_bullet_point(items):
     for item in items:
-        print("\u2022 " + item)  # Using Unicode character for bullet point (U+2022)
+        print("\u2022 " + item)  # using Unicode character for bullet point (U+2022)
 
-# Check the player's experience level and provide bonuses accordingly
+#cCheck the player's experience level and provide bonuses with exp
 if player_experience.lower() == "beginner":
     print("As a beginner, you will be playing on the easiest version of the game with added bonuses:")
     beginner_bonuses = ["Monsters Cannot See You", "You Have Unlimited Respawns", "50% More Regeneration", "2x Experience"]

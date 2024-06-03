@@ -65,10 +65,4 @@ def play_game():
         
         current_player = "O" if current_player == "X" else "X"
 
-# play_game()
-
-
-
-
-for i in range(1, 101):
-    print("wamo")
+play_game()

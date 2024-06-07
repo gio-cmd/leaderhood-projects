@@ -26,7 +26,7 @@ def player_move(board, player):
 def check_winner(board):
     # Check rows
     for row in board:
-        if row[0] == row[1] == row[2] != " ":
+        if row[0] == row[1] == row[2] != " ": 
             return row[0]
     # Check columns
     for col in range(3):
@@ -46,7 +46,7 @@ def check_draw(board):
     return True
 
 def play_game():
-    board = [[" " for _ in range(3)] for _ in range(3)]
+    board = [[" " for i in range(3)] for i in range(3)]
     current_player = "X"
     
     while True:

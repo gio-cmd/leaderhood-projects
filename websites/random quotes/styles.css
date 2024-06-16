@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #bbc6fa;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-box{
+    width: 700px;
+    background-color: #fff;
+    position: absolute;
+    top: 50;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
+}
+.quote-box h2{
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.author{
+    position: relative;
+    left: 100%;
+}

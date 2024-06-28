@@ -1,134 +1,191 @@
 import random
 
+# We will store every account here
+accounts = {}
 
-# we will store every accaunt here
-accaunts = {}
-
-# letting the user create an account
-def Create_accaunt():
+# Letting the user create an account
+def create_account():
     name = input('\nEnter your name: ')
 
-    # Check if user didnt fill the name input
+    # Check if user didn't fill the name input
     while name == "":
         print("\nWrong input, please enter your name")
         name = input('Enter your name: ')
 
     password = input('Enter your password: ')
-    # Check if user didnt fill the password input
+    # Check if user didn't fill the password input
     while password == "":
         print("\nWrong input, please enter your password")
-        name = input('Enter your password: ')
+        password = input('Enter your password: ')
     
-    # Give user unic number which will be used for login in the future
-    accaunt_number = random.randint(1, 100000)
-    print(f"you will be given an accaunt number: {accaunt_number}")
+    # Give user unique number which will be used for login in the future
+    account_number = random.randint(1, 100000)
+    print(f"You will be given an account number: {account_number}")
 
     balance = 0
 
-    accaunts[accaunt_number] = {'name': name, "balance": balance}
-    print('Accaunt succefuly created!')
+    accounts[account_number] = {'name': name, "balance": balance}
+    print('Account successfully created!')
 
-
+# Create a function for deposit
 def deposit():
-    accaunt_number = int(input("\nEnter your accaunt number: "))
+    account_number = input("\nEnter your account number: ")
+    # Check if input is valid integer and then make it int so we avoid error
+    while not account_number.isdigit():
+        print("Please enter a valid account number.")
+        account_number = input("Enter your account number: ")
+    account_number = int(account_number)
 
-    if accaunt_number in accaunts:
+    #check if accaunt number is in our storage, if so we add inputed value to it
+    if account_number in accounts:  
         money = input('Enter the amount to deposit: ')
         while not money.isdigit():
             print("Enter deposit amount using numbers!")
             money = input('Enter the amount to deposit: ')
-        accaunts[accaunt_number]['balance'] += float(money) 
-        print('Deposit succeful')
+        accounts[account_number]['balance'] += float(money) 
+        print('Deposit successful')
     else:
-        print("Accaunt not found")
+        print("Account not found")
 
+
+# transaction funcy
 def transaction():
-    giver = int(input("\nEnter your accaunt number: "))
-    if giver in accaunts:
-        reciver = int(input("Enter reciver's accaunt number: "))
-        if reciver in accaunts:
+    # find bank accaunt of the guy who makes transaction
+    giver = input("\nEnter your account number: ")
+    # Check if input is valid integer
+    while not giver.isdigit():
+        print("Please enter a valid account number.")
+        giver = input("Enter your account number: ")
+    giver = int(giver)
+
+    if giver in accounts:
+        # find bank accaunt of the guy who is reciving the money
+        receiver = input("Enter receiver's account number: ")
+        # Check if input is valid integer
+        while not receiver.isdigit():
+            print("Please enter a valid account number.")
+            receiver = input("Enter receiver's account number: ")
+        receiver = int(receiver)
+
+        # check if reciver's accaunt is in our bank's safe (accounts variable)
+        if receiver in accounts:
             money = input('Enter the amount to transfer: ')
+            # Check if input is valid integer
             while not money.isdigit():
                 print("Enter transfer amount using numbers!")
                 money = input('Enter the amount to transfer: ')
             money = float(money)
-            if accaunts[giver]["balance"] >= money:
-                accaunts[giver]["balance"] -= money
-                accaunts[reciver]["balance"] += money
-                print("Transfer succeful")
+
+            # check if user has more money or equal than the value he inputed
+            if accounts[giver]["balance"] >= money:
+                # substract the amount from his balance
+                accounts[giver]["balance"] -= money
+                # append the recivers balance
+                accounts[receiver]["balance"] += money
+                print("Transfer successful")
             else:
                 print("Not enough balance to make this transaction")
         else:
-            print('Recivers accaunt not found')
+            print("Receiver's account not found")
     else:
-        print("Accaunt not found")
+        print("Account not found")
 
 def withdraw():
-    accaunt_number = int(input("\nEnter your accaunt number: "))
+    account_number = input("\nEnter your account number: ")
+    # Check if input is valid integer
+    while not account_number.isdigit():
+        print("Please enter a valid account number.")
+        account_number = input("Enter your account number: ")
+    account_number = int(account_number)
 
-    if accaunt_number in accaunts:
+    if account_number in accounts:
         money = input('Enter the amount to withdraw: ')
+        # Check if input is valid integer
         while not money.isdigit():
             print("Enter withdraw amount using numbers!")
             money = input('Enter the amount to withdraw: ')
         money = float(money)
-        if accaunts[accaunt_number]['balance'] >= money:
-            accaunts[accaunt_number]['balance'] -= money
-            print('Withdrawal succeful')
+
+        # check if users balance is larger than money cuz otherwise he wont make that transaction/withdrawal
+        if accounts[account_number]['balance'] >= money:
+            accounts[account_number]['balance'] -= money
+            print('Withdrawal successful')
         else:
             print("Not enough balance to make this transaction")
     else:
-        print("Accaunt not found")
+        print("Account not found")
 
+# pretty simple delete func
 def delete():
-    accaunt_number = int(input("\nEnter your accaunt number: "))
+    account_number = input("\nEnter your account number: ")
+    # Check if input is valid integer
+    while not account_number.isdigit():
+        print("Please enter a valid account number.")
+        account_number = input("Enter your account number: ")
+    account_number = int(account_number)
 
-    if accaunt_number in accaunts:
-        accaunts.pop(accaunt_number)
+    # if acaunt is found then we just pop it from the accounts dict
+    if account_number in accounts:
+        accounts.pop(account_number)
+        print("Account successfully deleted")
     else:
-        print("Accaunt not found")
+        print("Account not found")
 
+# we view user credentials (high class words :DD) btw you should credentials with french accent
 def view():
-    accaunt_number = int(input("\nEnter your accaunt number: "))
+    account_number = input("\nEnter your account number: ")
+    # Check if input is valid integer
+    while not account_number.isdigit():
+        print("Please enter a valid account number.")
+        account_number = input("Enter your account number: ")
+    account_number = int(account_number)
 
-    if accaunt_number in accaunts:
-        print(f"Accaunt name is: {accaunts[accaunt_number['name']]}")
-        print(f"Your balance is: {accaunts[accaunt_number['balance']]}")
+    # if accaunt is found we display account name and balance
+    if account_number in accounts:
+        print(f"Account name is: {accounts[account_number]['name']}")
+        print(f"Your balance is: {accounts[account_number]['balance']}")
     else:
-        print("Accaunt not found")
+        print("Account not found")
 
-def user_accaunts():
-    for i in accaunts:
-        print(f"Accaunt name: {i['name']}, Balance: {i['balance']}")
+# we see every account in storage
+def user_accounts():
+    # iterate over accounts dict and get every accounts name and balance and account number, so much stuffys
+    for account_number, details in accounts.items():
+        print(f"Account number: {account_number}, Name: {details['name']}, Balance: {details['balance']}")
 
 while True:
+    # menu were user can choose some different options
     print('\nMenu')
-    print("1. Create an account")
-    print("2. Make a deposit")
-    print('3. Transfer money')
-    print('4. Withdraw money')
-    print("5. View profile")
-    print("6. Seach accounts")
-    print("7. Delete an accaunt")
-    print("8. Leave the bank")
+    print("1. Create an Account")
+    print("2. Deposit Money")
+    print("3. Transfer Money")
+    print("4. Withdraw Money")
+    print("5. View Account Details")
+    print("6. List All Accounts")
+    print("7. Delete an Account")
+    print("8. Exit")
 
-    
-    choice = int(input("\nEnter the number of the operation: "))
+    # input were user chooses whatever he wants and we also check if the inputed value is number in range of 1 thru 9
+    choice = input("\nPlease select an option (1-8): ")
+    while not choice.isdigit() or int(choice) not in range(1, 9):
+        print('Invalid input, please try again')
+        choice = input("\nPlease select an option (1-8): ")
 
+    choice = int(choice)
     if choice == 1:
-        Create_accaunt()
-    if choice == 2:
+        create_account()
+    elif choice == 2:
         deposit()
-    if choice == 3:
+    elif choice == 3:
         transaction()
-    if choice == 4:
+    elif choice == 4:
         withdraw()
-    if choice == 5:
+    elif choice == 5:
         view()
-    if choice == 6:
-        user_accaunts()
-    if choice == 7:
+    elif choice == 6:
+        user_accounts()
+    elif choice == 7:
         delete()
-    if choice == 8:
+    elif choice == 8:
         print("You are leaving the bank")
         break

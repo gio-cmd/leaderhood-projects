@@ -62,14 +62,57 @@ def transaction():
             print('Recivers accaunt not found')
     else:
         print("Accaunt not found")
-    
+
+def withdraw():
+    accaunt_number = int(input("\nEnter your accaunt number: "))
+
+    if accaunt_number in accaunts:
+        money = input('Enter the amount to withdraw: ')
+        while not money.isdigit():
+            print("Enter withdraw amount using numbers!")
+            money = input('Enter the amount to withdraw: ')
+        money = float(money)
+        if accaunts[accaunt_number]['balance'] >= money:
+            accaunts[accaunt_number]['balance'] -= money
+            print('Withdrawal succeful')
+        else:
+            print("Not enough balance to make this transaction")
+    else:
+        print("Accaunt not found")
+
+def delete():
+    accaunt_number = int(input("\nEnter your accaunt number: "))
+
+    if accaunt_number in accaunts:
+        accaunts.pop(accaunt_number)
+    else:
+        print("Accaunt not found")
+
+def view():
+    accaunt_number = int(input("\nEnter your accaunt number: "))
+
+    if accaunt_number in accaunts:
+        print(f"Accaunt name is: {accaunts[accaunt_number['name']]}")
+        print(f"Your balance is: {accaunts[accaunt_number['balance']]}")
+    else:
+        print("Accaunt not found")
+
+def user_accaunts():
+    for i in accaunts:
+        print(f"Accaunt name: {i['name']}, Balance: {i['balance']}")
 
 while True:
     print('\nMenu')
     print("1. Create an account")
     print("2. Make a deposit")
     print('3. Transfer money')
+    print('4. Withdraw money')
+    print("5. View profile")
+    print("6. Seach accounts")
+    print("7. Delete an accaunt")
+    print("8. Leave the bank")
 
+    
     choice = int(input("\nEnter the number of the operation: "))
 
     if choice == 1:
@@ -78,3 +121,14 @@ while True:
         deposit()
     if choice == 3:
         transaction()
+    if choice == 4:
+        withdraw()
+    if choice == 5:
+        view()
+    if choice == 6:
+        user_accaunts()
+    if choice == 7:
+        delete()
+    if choice == 8:
+        print("You are leaving the bank")
+        break

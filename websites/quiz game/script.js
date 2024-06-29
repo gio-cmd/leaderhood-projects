@@ -1,3 +1,5 @@
+// define variables
+
 const nextBtn = document.getElementById('next');
 const questionElement = document.getElementById('question');
 const answersElement = document.getElementById('anwers'); // Correct the ID
@@ -5,6 +7,8 @@ let index = 0;
 let score = 0;
 let answered = false;
 
+
+// create a variable that will store all the questions and anwers
 const questions = [
     {
         question: 'What is legal drinking age in Georgia?',
@@ -43,29 +47,30 @@ const questions = [
         ]
     },
     {
-        question: 'What does sigma mean',
+        question: 'English or spanish',
         answers: [
-            { answer: 'mate', correct: true },
-            { answer: 'mate', correct: false },
-            { answer: 'mate', correct: false },
-            { answer: 'mate', correct: false }
+            { answer: 'english', correct: true },
+            { answer: 'spanish', correct: true },
         ]
     }
 
 ];
 
+
+// function that will start quiz by displaying everything
 function startQuiz() {
     index = 0;
     score = 0;
     displayQuestion();
 }
 
+
 function displayQuestion() {
     answered = false;
     let question = questions[index].question;
     questionElement.innerHTML = `${index + 1}. ${question}`; 
 
-    answersElement.innerHTML = ''; =
+    answersElement.innerHTML = ''; 
 
     questions[index].answers.forEach(element => { 
         const button = document.createElement("button");

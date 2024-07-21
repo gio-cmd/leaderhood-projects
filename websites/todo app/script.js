@@ -17,11 +17,12 @@ function addTask() {
         });
 
         li.appendChild(x); 
+
         li.addEventListener('click', function() {
             this.classList.toggle('checked');
         });
 
         lists.appendChild(li);
-        input.value = ''; 
+        input.value = '';
     }
 }

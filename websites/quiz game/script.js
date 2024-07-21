@@ -2,13 +2,15 @@
 
 const nextBtn = document.getElementById('next');
 const questionElement = document.getElementById('question');
-const answersElement = document.getElementById('anwers'); // Correct the ID
+const answersElement = document.getElementById('anwers');
+
 let index = 0;
 let score = 0;
 let answered = false;
 
 
 // create a variable that will store all the questions and anwers
+
 const questions = [
     {
         question: 'What is legal drinking age in Georgia?',
@@ -57,20 +59,12 @@ const questions = [
 ];
 
 
-// function that will start quiz by displaying everything
-function startQuiz() {
-    index = 0;
-    score = 0;
-    displayQuestion();
-}
-
-
 function displayQuestion() {
     answered = false;
     let question = questions[index].question;
-    questionElement.innerHTML = `${index + 1}. ${question}`; 
+    questionElement.innerHTML = `${index + 1}. ${question}`; // question should be number higher than index for better looks
 
-    answersElement.innerHTML = ''; 
+    answersElement.innerHTML = ''; //restart questions
 
     questions[index].answers.forEach(element => { 
         const button = document.createElement("button");
@@ -109,4 +103,4 @@ nextBtn.addEventListener('click', () => {
     }
 });
 
-startQuiz();
+displayQuestion();

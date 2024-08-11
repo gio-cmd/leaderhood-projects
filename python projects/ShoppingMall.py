@@ -16,9 +16,15 @@ def add_to_cart(section_items):
     choices = input("Enter the numbers of the items you want to add to the cart (separated by commas): ")
     selected_items = []
 
-    for choice in choices.split(','):
-        choice = int(choice.strip())
-        if 0 <= choice < len(section_items):
+    if ',' not in choices:
+        choices = [choices] 
+    else:
+        choices = choices.split(',')
+
+    for choice in choices:
+        choice = choice.strip()
+        if choice.isdigit() and 0 <= int(choice) < len(section_items):
+            choice = int(choice)
             selected_item = list(section_items.keys())[choice]
             print(f"You selected: {selected_item}")
             add_or_back = input("Do you want to 'Add to Cart' or 'Back'? (Type 'add' or 'back'): ").lower()
@@ -30,9 +36,8 @@ def add_to_cart(section_items):
                 print(f"{selected_item} not added to cart.")
             else:
                 print("Invalid option. Item not added to cart.")
-
         else:
-            print(f"Invalid choice {choice}. Ignored.")
+            print(f"Invalid choice '{choice}'. Ignored.")
 
     return selected_items
 
@@ -116,12 +121,16 @@ format_with_bullet_point(fitness_items)
 selected_fitness = add_to_cart(fitness_items)
 total_price += sum(fitness_items[item] for item in selected_fitness)
 
+
+
 print("\nItems in your cart:")
 format_with_bullet_point(cart)
 print(f"Total Price: ${total_price:.2f}")
 
-print("pay")
+print("pay\n")
+
 pay = float(input("amount: "))
+
 if pay < total_price:
     print("You dont have enough money")
 elif pay == total_price:

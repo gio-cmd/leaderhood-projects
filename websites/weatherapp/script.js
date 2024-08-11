@@ -6,7 +6,7 @@ let searchBox = document.querySelector(".search input");
 let searchButton = document.querySelector(".search button");
 let weather_icon = document.querySelector(".weather-icon");
 
-let cel; // Celsius value storage
+let cel; 
 
 async function checkWeather(city) {
   try {
@@ -39,9 +39,8 @@ async function checkWeather(city) {
     document.querySelector(".weather").style.display = "block";
     document.querySelector(".err").style.display = "none";
 
-    // Store the Celsius value
     cel = tempCelcius;
-  } catch (error) {
+  }catch (error) {
     document.querySelector(".err").style.display = "block";
     document.querySelector(".weather").style.display = "none";
     console.error(error);
@@ -55,7 +54,7 @@ searchButton.addEventListener("click", () => {
   }
 });
 
-// Convert Celsius to Fahrenheit
+// farenheit convert function
 document.getElementById("farenheit").addEventListener("click", () => {
   if (cel !== undefined) {
     let fer = Math.floor(cel * 1.8 + 32);
@@ -63,7 +62,7 @@ document.getElementById("farenheit").addEventListener("click", () => {
   }
 });
 
-// Restore the Celsius value
+
 document.getElementById("celcius").addEventListener("click", () => {
   if (cel !== undefined) {
     document.querySelector(".temp").innerHTML = cel + "°C";

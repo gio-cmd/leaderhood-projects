@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #E0F7FA;
+    background-color: #1E201E;
 }
 .container{
     width: 40%;
@@ -23,7 +23,7 @@ body{
     outline: none;
 }
 .inputs-wrapper{
-    background-color: #080808;
+    background-color: #3C3D37;
     padding: 30px 25px;
     border-radius: 8px;
     box-shadow: 0 15px 20px rgba(0,0,0,0.3);
@@ -57,13 +57,14 @@ button{
 .outputs-wrapper div{
     height: 100px;
     width: 100px;
-    background-color: #080808;
+    background-color: #3C3D37;
     border-radius: 5px;
-    color: #2F4F4F;
+    color: #2F9F9F;
     display: grid;
     place-items: center;
     padding: 20px 0;
     box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+    font-weight: 700;
 }
 span{
     font-size: 30px;

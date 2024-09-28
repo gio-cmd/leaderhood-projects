@@ -1,0 +1,655 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  background: #FFF7F0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  margin: 1rem;
+  background-color: #061205;
+}
+
+main{
+    margin: 0 auto;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+    align-items: center;
+    height: 22vh;
+    padding-block: 1rem 2rem;
+    width: 100%;
+
+}
+.navbar{
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.4rem;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+.navbar a:hover{
+    color: #B4FF00;
+}
+
+.btn{
+    background-color: #008080;
+    padding: 8.5px;
+    border-radius: 40px;
+    width: 189px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #755CDE;
+}
+.btn:active{
+    background: #4d2dd0;
+}
+#header-img{
+    cursor: pointer;
+}
+.btn0{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+#hero-section{
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+#hero-section h1{
+    font-size: 3.5rem;
+    line-height: 4.41rem;
+    font-weight: 700;
+    position: relative;
+    bottom: 4px;
+    color: #B4FF00;
+}
+
+#hero-section p{
+    color: #7A746E;
+    font-size: 1.125rem;
+}
+
+#skill-container {
+    display: grid;
+    grid-template-columns: 310px repeat(2, 150px) 310px;
+    grid-template-rows: repeat(2, 180px);
+    gap: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+.skill-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 1rem; 
+    border-radius: 10px;
+}
+#section-1{
+    background: #755CDE;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#section-2{
+    background: #F6A560;
+}
+#section-3{
+    background: #F39E9E;
+}
+#section-4{
+    background: #61C4B7;
+}
+#section-5{
+    background: #EB7565;
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+}
+#section-6{
+    background: #552049;
+}
+
+.skill-box img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.5rem 1.5rem 0 0;
+}
+
+.skill-box h2 {
+    margin: 0 0 0.4rem 0.4rem;
+    color: white;
+}
+#my-squad{
+    margin-top: 9rem;
+    display: flex;
+    justify-content: space-around;
+    max-width: 1080px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#my-squad img{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-left: 2.2rem;
+
+}
+
+#my-squad div{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    justify-content: space-around;
+}
+#my-squad div h3{
+    font-size: 1.9rem;
+    margin-bottom: 1.3rem;
+    color: #CCCCCC;
+}
+#my-squad div p{
+    font-size: 1.25rem;
+    color: #7A746E;
+    margin-bottom: 1.5rem;
+}
+.btn2{
+    background: #EB7565;
+    font-weight: 700;
+    padding: 0.5rem 1.6875rem;
+    border-radius: 28px;
+    cursor: pointer;
+}
+.btn2:hover{
+    background: #F6A560;
+}
+.btn2:active{
+    background: #d77f31;
+}
+
+#slides{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+    object-fit:fill;
+}
+
+#slides h3{
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #00FFFF;
+}
+#slides img{
+    margin-bottom: 3rem;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+    width: 1140px;
+    height: 700px;
+    position: relative;
+    bottom: 4px;
+
+}
+
+#slides img:hover{
+    transform: scale(1.1);
+}
+.b-padding{
+    background-color: black;
+    padding: 1.5rem;
+    border-radius: 100%;
+    color: white;
+}
+.b-padding:hover{
+    background: #755CDE;
+    cursor: pointer;
+}
+.b-padding:active{
+    background: #4d2dd0;
+}
+.arrows{
+    width: 170px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#contact{
+    background: #030303;
+    border-radius: 10px;
+    color: #FFF7F0;
+    padding: 3rem 1.5rem;
+    margin-top: 6.25rem;
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    height: 20rem;
+}
+#contact-t{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#contact h3{
+    font-size: 2.5rem;
+    display: inline;
+}
+
+#contact p{
+    font-size: 1.25rem;
+    display: inline;
+}
+.btn3{
+    background: #EB7565;
+    font-weight: 700;
+    padding: 0.7rem 1.6875rem;
+    border-radius: 28px;
+    cursor: pointer;
+    width: 180px;
+    color: white;
+}
+.btn3:hover{
+    background: #a35c52;
+}
+.btn3:active{
+    background: #8b3f36;
+}
+footer{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+#absolute{
+    position: absolute;
+    width: 1140px; 
+    height: 700px;  
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+#absolute:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.button {
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#absolute:hover .button {
+    display: block;
+}
+
+@media only screen and (max-width: 1200px) {
+    .navbar{
+        font-size: 1.3rem;
+        width: 45%;
+    }
+    #skill-container{
+        grid-template-rows: repeat(3, 180px);
+        width: 650px;
+    }
+    #section-4{
+        grid-column-start: 1;
+        grid-row-end: 4;
+    } 
+    #section-5{
+        grid-column-start: 2;
+        grid-row-start: 2;
+    } 
+    #section-6{
+        grid-column-start: 2;
+        grid-row-start: 3;
+        grid-column-end: 4;
+    } 
+    #my-squad{
+        justify-content: space-evenly;
+    }
+    .profile-info{
+        max-width: 350px;
+    }
+    header{
+        justify-content: space-around;
+        gap: 10px;
+    }
+    #slides{
+        width: 100%;
+    }
+    #slides img{
+        width: 840px;
+        height: 500px;
+    }
+    #absolute{
+        width: 840px;
+        height: 500px;
+    }
+    .btn {
+        width: 20%; 
+    }
+    #contact{
+        width: 840px;
+    }
+    .button{
+        padding: 8px;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .navbar{
+        font-size: 1.1rem;
+    }
+    #my-squad{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    #my-squad a{
+        position: relative;
+        top: 410px;
+        left: 90px;
+    }
+    #slides{
+        margin-top: 120px;
+    }
+    
+    #slides img{
+        width: 600px;
+        height: 400px;
+        
+    }
+    #absolute{
+        width: 600px;
+        height: 400px;
+    }
+    #contact{
+        width: 600px;
+    }
+    #contact h3{
+        font-size: 2rem;
+    }
+    #contact p{
+        font-size: 1.1rem;
+    }
+    #contact button{
+        width: 150px;
+    }
+    #hero-section{
+        justify-content: space-evenly;
+        margin-top: 0;
+        height: 12vh;
+        margin-bottom: 40px;
+    }
+    #hero-section h1{
+        font-size: 3rem;
+    }
+    #hero-section p{
+        font-size: 1rem;
+    }
+    header{
+        height: 15vh;
+    }
+    .button{
+        padding: 6px;
+        font-size: 1.7rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .navbar{
+        width: 60%;
+    }
+    header{
+        margin-bottom: 40px;
+    }
+    #skill-container{
+        grid-template-rows: repeat(6, 180px);
+        grid-template-columns: 160px 160px;
+        width: 350px;
+    }
+    #section-1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    #section-2{
+        grid-column-start: 1;
+    }
+    #section-3{
+        grid-column-start: 2;
+    }
+    #section-4{
+        grid-row-start: 5;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-end: 6;
+    }
+    #section-5{
+        grid-row-start: 4;
+        grid-column-end: 3;
+        grid-column-start: 1;
+    }
+    #section-6{
+        grid-column-start: 1;
+        grid-row-start: 6;
+        grid-column-end: 3;
+    }
+    #hero-section p{
+        font-size: 1.3;
+        max-width: 430px;
+    }
+    #slides img{
+        width: 500px;
+        height: 370px;
+    }
+    #absolute{
+        width: 500px;
+        height: 370px;
+    }
+    #contact{
+        width: 500px;
+    }
+    .button{
+        padding: 5px;
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width: 630px) {
+    #hero-section h1{
+        font-size: 2.5rem;
+    }
+    #hero-section p{
+        position: relative;
+        left: 30px;
+    }
+    .btn{
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .navbar{
+        font-size: 0.9rem;
+    }
+    #hero-section h1{
+        font-size: 2.1rem;
+    }
+    #hero-section p{
+        font-size: 0.8rem;
+        width: 350px;
+        left: 15px;
+    }
+    header img{
+        width: 50px;
+    }
+    .btn{
+        font-size: 0.76rem;
+        width: 130px;
+    }
+    #slides img{
+        width: 360px;
+        height: 300px;
+    }
+    #absolute{
+        width: 360px;
+        height: 300px;
+    }
+    #contact{
+        width: 360px;
+        height: 330px;
+        flex-direction: column;
+    }
+    #contact h3{
+        font-size: 1.4rem;
+    }
+    #contact p{
+        font-size: 0.9rem;
+    }
+    #contact button{
+        width: 130px;
+        font-size: 0.7rem;
+        position: relative;
+        right: 50px;
+        top: 20px;
+    }
+    .button{
+        padding: 4px;
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .navbar{
+        font-size: 0.75rem;
+        width: 72%;
+    }
+    #hero-section h1{
+        font-size: 1.8rem;
+    }
+    #hero-section p{
+        font-size: 0.75rem;
+        width: 310px;
+        left: 15px;
+    }
+    .btn{
+        font-size: 0.5rem;
+    }
+    header img{
+        width: 40px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    header{
+        height: 10vh;
+        margin-bottom: 2rem;
+    }
+    #hero-section{
+        height: 10vh;
+    }
+    #hero-section h1{
+        font-size: 1.45rem;
+    }
+    #hero-section p{
+        font-size: 0.65rem;
+        width: 260px;
+        left: 15px;
+    }
+    #skill-container{
+        grid-template-rows: repeat(6, 160px);
+        grid-template-columns: 140px 140px;
+        width: 300px;
+        position: relative;
+        right: 5px;
+    }
+    #slides img{
+        width: 280px;
+        height: 240px;
+    }
+    #absolute{
+        width: 280px;
+        height: 240px;
+    }
+    #contact{
+        width: 280px;
+    }
+    #contact h3{
+        font-size: 1.1rem;
+    }
+    #contact p{
+        font-size: 0.7rem;
+    }
+    #contact button{
+        right: 30px;
+    }
+    #my-squad img{
+        margin-left: 0;
+        width: 260px;
+        height: 260px;
+    }
+    #my-squad a{
+        position: relative;
+        top: 320px;
+        left: 95px;
+    }
+    #my-squad div h3{
+        font-size: 1.4rem;
+    }
+    #my-squad div p{
+        font-size: 0.8rem;
+    }
+    #my-squad div{
+        margin-left: 0;
+    }
+    #my-squad{
+        gap: 0;
+    }
+}
